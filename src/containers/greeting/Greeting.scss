@@ -37,7 +37,11 @@
 .button-greeting-div {
   display: flex;
   margin-top: 40px;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
 }
+.button-greeting-div .main-button { margin-right: 0; }
 .download-link-button {
   text-decoration: none;
 }
@@ -101,7 +105,8 @@
 }
 @media (max-width: 768px) {
   .button-greeting-div {
-    justify-content: space-around;
+    justify-content: center;
+    gap: 12px;
   }
   .greeting-text {
     font-size: 30px;
