@@ -10,7 +10,15 @@ export default function Footer() {
     <Fade bottom duration={1000} distance="5px">
       <div className="footer-div">
         <p className={isDark ? "dark-mode footer-text" : "footer-text"}>
-          {emoji("Portfolio template modified and customized by Annas Khalid")}
+          {emoji("Portfolio template modified and customized by ")}
+          <a
+            href="https://github.com/annaskhalid0"
+            target="_blank"
+            rel="noreferrer"
+            style={{ color: 'inherit', textDecoration: 'underline' }}
+          >
+            Annas Khalid
+          </a>
         </p>
         <p className={isDark ? "dark-mode footer-text" : "footer-text"}>
           Original theme by{" "}
