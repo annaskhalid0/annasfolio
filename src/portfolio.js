@@ -43,14 +43,14 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "PASSIONATE DATA ANALYST & BI DEVELOPER SPECIALIZING IN DATA INSIGHTS AND BUSINESS INTELLIGENCE",
   skills: [
     emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
+      "⚡ Transform raw data into actionable insights using advanced analytics and visualization techniques"
     ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
+    emoji("⚡ Build interactive dashboards and reports with Power BI, Tableau, and Excel for business decision-making"),
     emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
+      "⚡ Apply machine learning and statistical analysis to uncover patterns and trends in complex datasets"
     )
   ],
 
@@ -59,56 +59,52 @@ https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
     {
-      skillName: "html-5",
-      fontAwesomeClassname: "fab fa-html5"
-    },
-    {
-      skillName: "css3",
-      fontAwesomeClassname: "fab fa-css3-alt"
-    },
-    {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
-    },
-    {
-      skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
-    },
-    {
-      skillName: "reactjs",
-      fontAwesomeClassname: "fab fa-react"
-    },
-    {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
-    },
-    {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
-    },
-    {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
-    },
-    {
-      skillName: "sql-database",
-      fontAwesomeClassname: "fas fa-database"
-    },
-    {
-      skillName: "aws",
-      fontAwesomeClassname: "fab fa-aws"
-    },
-    {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
-    },
-    {
-      skillName: "python",
+      skillName: "Python",
       fontAwesomeClassname: "fab fa-python"
     },
     {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
+      skillName: "SQL",
+      fontAwesomeClassname: "fas fa-database"
+    },
+    {
+      skillName: "Power BI",
+      fontAwesomeClassname: "fas fa-chart-bar"
+    },
+    {
+      skillName: "Tableau",
+      fontAwesomeClassname: "fas fa-chart-line"
+    },
+    {
+      skillName: "Excel",
+      fontAwesomeClassname: "fas fa-file-excel"
+    },
+    {
+      skillName: "DAX",
+      fontAwesomeClassname: "fas fa-calculator"
+    },
+    {
+      skillName: "Power Query",
+      fontAwesomeClassname: "fas fa-filter"
+    },
+    {
+      skillName: "Machine Learning",
+      fontAwesomeClassname: "fas fa-brain"
+    },
+    {
+      skillName: "Data Analysis",
+      fontAwesomeClassname: "fas fa-search"
+    },
+    {
+      skillName: "Data Visualization",
+      fontAwesomeClassname: "fas fa-chart-pie"
+    },
+    {
+      skillName: "Statistics",
+      fontAwesomeClassname: "fas fa-chart-area"
+    },
+    {
+      skillName: "Git",
+      fontAwesomeClassname: "fab fa-git-alt"
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -120,23 +116,15 @@ const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "Harvard University",
-      logo: require("./assets/images/harvardLogo.png"),
-      subHeader: "Master of Science in Computer Science",
-      duration: "September 2017 - April 2019",
-      desc: "Participated in the research of XXX and published 3 papers.",
+      schoolName: "Sindh Madressatul Islam University",
+      logo: require("./assets/images/smiu.png"),
+      subHeader: "Bachelor's of Science in Computer Science",
+      duration: "September 2021 - June 2025",
+      desc: "Successfully completed my undergraduate degree in Computer Science, gaining comprehensive knowledge in software development, algorithms, and AI/ML.",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Graduated with strong foundation in core computer science concepts including programming, mathematics, and data analysis including AI",
+        "Developed expertise in Data Analytics, Data Visualization, and Data Engineering"
       ]
-    },
-    {
-      schoolName: "Stanford University",
-      logo: require("./assets/images/stanfordLogo.png"),
-      subHeader: "Bachelor of Science in Computer Science",
-      duration: "September 2013 - April 2017",
-      desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
     }
   ]
 };
@@ -147,16 +135,16 @@ const techStack = {
   viewSkillBars: true, //Set it to true to show Proficiency Section
   experience: [
     {
-      Stack: "Frontend/Design", //Insert stack or technology you have experience in
+      Stack: "Data Visualization/Design", //Insert stack or technology you have experience in
       progressPercentage: "90%" //Insert relative proficiency in percentage
     },
     {
-      Stack: "Backend",
-      progressPercentage: "70%"
+      Stack: "DAX/Power Query",
+      progressPercentage: "80%"
     },
     {
-      Stack: "Programming",
-      progressPercentage: "60%"
+      Stack: "Python/SQL",
+      progressPercentage: "70%"
     }
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
@@ -168,29 +156,20 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      role: "Data Analyst",
+      company: "Extern & Beats by Dre",
+      companylogo: require("./assets/images/externlogo.png"),
+      date: "August 2025 – Present",
+      desc: "Specializing in qualitative vs quantitative analytics insights to drive data-driven business decisions and consumer behavior analysis.",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Understood the key difference between customer (buyer) and consumer (user) in business strategy",
+        "Learned how to extract and apply consumer insights to improve product positioning and marketing",
+        "Designed an \"Ideal Consumer List\" for Beats by Dre, segmenting audiences by demographics and psychographics",
+        "Created a Customer Journey Map outlining stages, touch points, and customer emotions from awareness to loyalty",
+        "Applied the AIDA framework (Attention, Interest, Desire, Action) to analyze Beats by Dre's consumer journey",
+        "Built a detailed AIDA-based Customer Journey Map summarizing customer actions, thoughts, feelings, and brand touch points",
+        "Will be working on qualitative & quantitative sentiment analysis using Python and AI tools to decode consumer emotions and market trends"
       ]
-    },
-    {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     }
   ]
 };
@@ -206,29 +185,39 @@ const openSource = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  title: "TECHNICAL PROJECTS",
+  subtitle: "PROJECTS I BUILT FOR UPSKILLING AND PRACTICE",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/flightlogo.png"),
+      projectName: "Airline Flight Delay Analysis",
+      projectDesc: "Developed an end-to-end Airline Flight Delay Analysis pipeline using Python, SQL, and Power BI, delivering interactive dashboards with KPIs and route performance insights.",
       footerLink: [
         {
-          name: "Visit Website",
-          url: "http://saayahealth.com/"
+          name: "View Project",
+          url: "https://www.linkedin.com/posts/annas-khalid-6687a6242_flightsoverviewdashboards-activity-7329541812342222848-8Mze?utm_source=share&utm_medium=member_desktop&rcm=ACoAADxGCjABlQgZjh8bu4cOIK_fBl8DwtY5SNg"
         }
-        //  you can add extra buttons here.
       ]
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/churnlogo.png"),
+      projectName: "Bank Customer Churn Analysis",
+      projectDesc: "Executed Bank Customer Churn Analysis on 10K+ records, applying EDA, SQL queries, and Power BI visualizations to identify high-risk customer segments and churn drivers.",
       footerLink: [
         {
-          name: "Visit Website",
-          url: "http://nextu.se/"
+          name: "View Project",
+          url: "https://www.linkedin.com/posts/annas-khalid-6687a6242_bankchurnedcustomersdashboard-activity-7333865085137793025-iGFE?utm_source=share&utm_medium=member_desktop&rcm=ACoAADxGCjABlQgZjh8bu4cOIK_fBl8DwtY5SNg"
+        }
+      ]
+    },
+    {
+      image: require("./assets/images/hrlogo.png"),
+      projectName: "HR Analytics Dashboard",
+      projectDesc: "Built an HR Analytics Dashboard integrating DAX measures and Python-based preprocessing to provide workforce trends, performance metrics, and predictive insights.",
+      footerLink: [
+        {
+          name: "View Project",
+          url: "https://www.linkedin.com/posts/annas-khalid-6687a6242_hranalytics-datavisualization-dataanalytics-activity-7194939305813852160-Pub6?utm_source=share&utm_medium=member_desktop&rcm=ACoAADxGCjABlQgZjh8bu4cOIK_fBl8DwtY5SNg"
         }
       ]
     }
@@ -366,8 +355,8 @@ const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+92-0000000000",
-  email_address: "saadpasta70@gmail.com"
+  number: "+923062913260",
+  email_address: "annaskhalid709@gmail.com"
 };
 
 // Twitter Section
