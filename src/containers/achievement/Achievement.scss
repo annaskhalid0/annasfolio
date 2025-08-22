@@ -15,6 +15,20 @@
   color: $subTitle;
 }
 
+.achievement-cards-div {
+  transition: opacity 400ms ease, transform 400ms ease;
+}
+
+.achievement-cards-div.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.achievement-cards-div.fade-out {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
 /* Media Query */
 @media (max-width: 1380px) {
   .achievement-heading {

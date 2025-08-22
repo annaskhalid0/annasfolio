@@ -2,7 +2,7 @@
 
 /*React-headroom*/
 .headroom-wrapper {
-  max-height: 100px;
+  max-height: 140px; /* allow taller compact logo without clipping */
 }
 
 /* header */
@@ -20,11 +20,23 @@
   background-color: $buttonColor !important;
 }
 
-.header {
-  background-color: $lightBackground1;
-  max-width: 100%;
-  padding: 15px 20px;
-  margin: 0px auto;
+ .header {
+   background-color: $lightBackground1;
+   max-width: 100%;
+   padding: 15px 20px;
+   margin: 0px auto;
+   position: fixed; /* make header sticky */
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 1000; /* keep above other content */
+   overflow: visible; /* avoid clipping centered logo */
+   transition: padding 200ms ease, height 200ms ease;
+ }
+
+/* Add top margin to body to account for fixed header */
+body {
+  padding-top: 80px;
 }
 
 .header ul {
@@ -58,6 +70,8 @@
   text-decoration: none;
   margin-top: 10px;
   line-height: normal;
+  z-index: 2; /* keep above menu */
+  transition: transform 300ms ease, left 300ms ease, right 300ms ease;
 }
 
 .header .logo-name {
@@ -66,6 +80,35 @@
   font-variant-ligatures: no-common-ligatures;
   -webkit-font-variant-ligatures: no-common-ligatures;
   padding: 0 10px;
+}
+
+.header.compact {
+  padding: 16px 16px; /* a bit more vertical padding to avoid cut off */
+}
+
+.header.compact .logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  float: none;
+  margin-top: 0;
+}
+
+.logo-centered {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header.compact .logo-name {
+  font-size: 0.9em; /* slightly smaller in compact mode to fit nicely */
+}
+
+.menu-hidden {
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
 }
 
 /* menu */

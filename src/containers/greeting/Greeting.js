@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect, useRef, useState} from "react";
 import {Fade} from "react-reveal";
 import emoji from "react-easy-emoji";
 import "./Greeting.scss";
@@ -11,6 +11,24 @@ import StyleContext from "../../contexts/StyleContext";
 
 export default function Greeting() {
   const {isDark} = useContext(StyleContext);
+  const [isFadingOut, setIsFadingOut] = useState(false);
+  const lastScrollYRef = useRef(0);
+
+  useEffect(() => {
+    function handleScroll() {
+      const currentY = window.scrollY || window.pageYOffset;
+      const isScrollingDown = currentY > lastScrollYRef.current;
+      // Stay visible when scrolling down; fade out when scrolling up beyond threshold
+      if (!isScrollingDown && currentY > 100) {
+        setIsFadingOut(true);
+      } else {
+        setIsFadingOut(false);
+      }
+      lastScrollYRef.current = currentY;
+    }
+    window.addEventListener("scroll", handleScroll, {passive: true});
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   if (!greeting.displayGreeting) {
     return null;
   }
@@ -23,9 +41,7 @@ export default function Greeting() {
               <h1
                 className={isDark ? "dark-mode greeting-text" : "greeting-text"}
               >
-                {" "}
-                {greeting.title}{" "}
-                <span className="wave-emoji">{emoji("👋")}</span>
+                {greeting.title}
               </h1>
               <p
                 className={
@@ -52,14 +68,11 @@ export default function Greeting() {
             </div>
           </div>
           <div className="greeting-image-div">
-            {illustration.animated ? (
-              <DisplayLottie animationData={landingPerson} />
-            ) : (
-              <img
-                alt="man sitting on table"
-                src={require("../../assets/images/manOnTable.svg")}
-              ></img>
-            )}
+            <img
+              alt="Annas Khalid profile"
+              src="/Annas_PP1.png"
+              className={`profile-avatar ${isFadingOut ? "fade-out" : "fade-in"}`}
+            />
           </div>
         </div>
       </div>
