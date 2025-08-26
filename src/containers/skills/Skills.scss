@@ -24,6 +24,7 @@
   font-size: 56px;
   font-weight: 400;
 }
+
 .subTitle {
   color: $subTitle;
 }
@@ -34,6 +35,7 @@
     font-size: 40px;
   }
 }
+
 @media (max-width: 768px) {
   .skills-heading {
     font-size: 30px;
@@ -57,8 +59,22 @@
     font-size: 16px;
     text-align: center;
   }
-  .skills-image-div {
-    /* display: none; */
-    order: 2;
+  .skills-image-div > div {
+    width: 250px !important;
+    height: 250px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-image-div > div {
+    width: 180px !important;
+    height: 180px !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .skills-image-div > div {
+    width: 150px !important;
+    height: 150px !important;
   }
 }
