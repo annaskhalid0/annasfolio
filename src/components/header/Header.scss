@@ -220,36 +220,63 @@ body {
 }
 /* Mobile-specific header fixes */
 @media (max-width: 768px) {
+  body {
+    padding-top: 50px; /* Reduced padding for mobile */
+  }
+  
   .header {
     font-size: 12px;
+    padding: 10px 20px; /* Reduced header padding for mobile */
   }
   
   .header .logo {
-    font-size: 1.2em; /* Smaller font size for mobile */
+    font-size: 1.2em;
+    margin-top: 5px; /* Reduced margin */
   }
   
   .header .logo-name {
-    font-size: 0.85em; /* Even smaller to prevent wrapping */
-    white-space: nowrap; /* Prevent text wrapping */
+    font-size: 0.85em;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 200px; /* Limit width to prevent overflow */
+    max-width: 200px;
+  }
+  
+  .header.compact {
+    padding: 8px 16px; /* Even smaller padding in compact mode */
+  }
+  
+  .header.compact .logo {
+    margin-top: 3px;
   }
   
   .header.compact .logo-name {
-    font-size: 0.75em; /* Smaller in compact mode */
+    font-size: 0.75em;
     max-width: 180px;
   }
 }
 
 @media (max-width: 480px) {
+  body {
+    padding-top: 45px; /* Even smaller gap for very small screens */
+  }
+  
+  .header {
+    padding: 8px 15px;
+  }
+  
   .header .logo {
     font-size: 1em;
+    margin-top: 3px;
   }
   
   .header .logo-name {
     font-size: 0.75em;
     max-width: 150px;
+  }
+  
+  .header.compact {
+    padding: 6px 12px;
   }
   
   .header.compact .logo-name {
@@ -259,6 +286,14 @@ body {
 }
 
 @media (max-width: 320px) {
+  body {
+    padding-top: 40px; /* Minimal gap for very small devices */
+  }
+  
+  .header {
+    padding: 6px 10px;
+  }
+  
   .header .logo-name {
     font-size: 0.65em;
     max-width: 120px;
@@ -267,5 +302,184 @@ body {
   .header.compact .logo-name {
     font-size: 0.55em;
     max-width: 100px;
+  }
+}
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.grey-color {
+  color: $subTitle;
+}
+
+.header li a {
+  display: block;
+  padding: 15px 20px;
+  color: $textColor;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: $headerHoverBG;
+}
+
+.header .logo {
+  display: block;
+  flex: none;
+  float: left;
+  font-size: 1.5em;
+  text-decoration: none;
+  margin-top: 10px;
+  line-height: normal;
+  z-index: 2; /* keep above menu */
+  transition: transform 300ms ease, left 300ms ease, right 300ms ease;
+}
+
+.header .logo-name {
+  font-family: "Agustina Regular";
+  font-weight: bold;
+  font-variant-ligatures: no-common-ligatures;
+  -webkit-font-variant-ligatures: no-common-ligatures;
+  padding: 0 10px;
+}
+
+.header.compact {
+  padding: 20px 16px; /* increased top/bottom padding for better spacing */
+}
+
+.header.compact .logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  float: none;
+  margin-top: 8px; /* add some top margin to create gap from top */
+}
+
+.logo-centered {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header.compact .logo-name {
+  font-size: 0.9em; /* slightly smaller in compact mode to fit nicely */
+}
+
+.menu-hidden {
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: $iconBackground;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon-dark {
+  background: $textColorDark;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: $iconBackground;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon-dark:before,
+.header .menu-icon .navicon-dark:after {
+  background: $textColorDark !important;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 486px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent !important;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header .menu {
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
   }
 }
