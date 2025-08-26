@@ -36,7 +36,7 @@
 
 /* Add top margin to body to account for fixed header */
 body {
-  padding-top: 80px;
+  padding-top: 70px;
 }
 
 .header ul {
@@ -83,7 +83,7 @@ body {
 }
 
 .header.compact {
-  padding: 16px 16px; /* a bit more vertical padding to avoid cut off */
+  padding: 20px 16px; /* increased top/bottom padding for better spacing */
 }
 
 .header.compact .logo {
@@ -91,7 +91,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   float: none;
-  margin-top: 0;
+  margin-top: 8px; /* add some top margin to create gap from top */
 }
 
 .logo-centered {
