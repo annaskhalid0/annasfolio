@@ -14,10 +14,45 @@
   font-size: 2.5rem;
   text-decoration: none;
 }
+
 .splash-title {
   font-family: "Agustina Regular", cursive;
   font-weight: bold;
   font-variant-ligatures: no-common-ligatures;
   -webkit-font-variant-ligatures: no-common-ligatures;
   padding: 0 20px;
+}
+
+/* Mobile-specific fixes */
+@media (max-width: 768px) {
+  .splash-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .splash-title-container {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .splash-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .splash-title-container {
+    font-size: 1.5rem;
+  }
+  
+  .splash-animation-container {
+    height: 40vh;
+  }
 }

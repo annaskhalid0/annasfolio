@@ -218,8 +218,54 @@ body {
     display: none;
   }
 }
-@media (max-width: 960px) and (min-width: 768px) {
+/* Mobile-specific header fixes */
+@media (max-width: 768px) {
   .header {
     font-size: 12px;
+  }
+  
+  .header .logo {
+    font-size: 1.2em; /* Smaller font size for mobile */
+  }
+  
+  .header .logo-name {
+    font-size: 0.85em; /* Even smaller to prevent wrapping */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px; /* Limit width to prevent overflow */
+  }
+  
+  .header.compact .logo-name {
+    font-size: 0.75em; /* Smaller in compact mode */
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header .logo {
+    font-size: 1em;
+  }
+  
+  .header .logo-name {
+    font-size: 0.75em;
+    max-width: 150px;
+  }
+  
+  .header.compact .logo-name {
+    font-size: 0.65em;
+    max-width: 130px;
+  }
+}
+
+@media (max-width: 320px) {
+  .header .logo-name {
+    font-size: 0.65em;
+    max-width: 120px;
+  }
+  
+  .header.compact .logo-name {
+    font-size: 0.55em;
+    max-width: 100px;
   }
 }
