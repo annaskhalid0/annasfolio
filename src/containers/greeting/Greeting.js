@@ -70,7 +70,7 @@ export default function Greeting() {
           <div className="greeting-image-div">
             <img
               alt="Annas Khalid profile"
-              src="/Annas_PP1.png"
+              src="/Annas_PP1.jpg"
               className={`profile-avatar ${isFadingOut ? "fade-out" : "fade-in"}`}
             />
           </div>
