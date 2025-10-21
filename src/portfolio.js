@@ -26,7 +26,7 @@ const greeting = {
     "A passionate Data Analyst & BI Developer 📊 skilled in extracting insights from data using Python and SQL — creating interactive dashboards with Power BI & Tableau, and applying Machine Learning for business solutions."
 ),
   resumeLink:
-    "https://drive.google.com/file/d/1MytYzLEpivctS3mOYPaGxGS4JRVxr7am/view?usp=sharing", // Set to empty to hide the button
+    "https://drive.google.com/file/d/1rnX1KBRvqFxfRIAS3HJsCpJLMPMgLhX9/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
